@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>QRコードジェネレーター</title>
+<style>
+  body { font-family: sans-serif; text-align: center; padding: 50px; }
+  input { width: 300px; padding: 10px; margin-bottom: 10px; }
+  button { padding: 10px 20px; }
+  #qrcode { margin-top: 20px; }
+</style>
+</head>
+<body>
+
+<h1>QRコードジェネレーター📱</h1>
+<input type="text" id="text" placeholder="QRにしたい文字やURLを入力" />
+<br>
+<button onclick="generateQRCode()">生成</button>
+<div id="qrcode"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script>
+  function generateQRCode() {
+    const container = document.getElementById("qrcode");
+    container.innerHTML = ""; // 前のQRコードを消す
+    const text = document.getElementById("text").value;
+    if (text.trim() === "") { alert("文字を入力してね！"); return; }
+    new QRCode(container, { text, width: 200, height: 200 });
+  }
+</script>
+
+</body>
+</html>
