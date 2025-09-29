@@ -83,11 +83,12 @@ button {
     const container = document.getElementById("qrcode");
     container.innerHTML = ""; // 前のQRコードを消す
     const text = document.getElementById("text").value;
-    if (text.trim() === "") { alert("文字を入力してね！"); return; }
+    if (text.trim() === "") { alert("文字を入力してください"); return; }
     new QRCode(container, { text, width: 200, height: 200 });
   }
 </script>
 
 </body>
 </html>
+
 
