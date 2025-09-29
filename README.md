@@ -1,2 +1,2 @@
-# qr-generator
+# QR-Generator
 link to QR
