@@ -3,17 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <title>QRコードジェネレーター</title>
-<style>
-  body { font-family: sans-serif; text-align: center; padding: 50px; }
+
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet">
   
-    h1 {
-    font-size: 900px; /* ←ここで文字サイズを指定 */
+<style>
+  body { font-family: 'Zen Kaku Gothic New', sans-serif; text-align: center; padding: 50px; }
+  
+  h1 {
+    font-size: 60px; /* 文字サイズを調整 */
     margin-bottom: 30px; 
   }
   
-  input { width: 300px; padding: 10px; margin-bottom: 10px; }
-  button { padding: 10px 20px; }
-  #qrcode { margin-top: 20px; }
+  /* テキストボックスを少し丸く */
+  input {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    border-radius: 10px;  /* 角を少し丸く */
+    border: 2px solid #ccc;
+    outline: none;
+  }
+
+  button { 
+    padding: 10px 20px; 
+    font-size: 18px; 
+  }
+
+  /* QRコード中央寄せ */
+  #qrcode {
+    margin: 20px auto;      /* 上下マージンと中央寄せ */
+    display: inline-block;  /* ブロック化して中央に配置 */
+  }
 </style>
 </head>
 <body>
@@ -37,5 +58,3 @@
 
 </body>
 </html>
-
-
