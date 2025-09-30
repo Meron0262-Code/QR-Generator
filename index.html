@@ -57,13 +57,16 @@ button {
     outline: none;
   }
 
-  button { 
-    padding: 10px 20px; 
-    font-size: 18px; 
-    border-radius: 10px; 
-    cursor: pointer; 
-    margin-bottom: 20px; /* ← ボタンとQRコードの間に余白 */
-  }
+　  button {
+　  padding: 12px 25px;
+　  font-size: 18px;
+　  border-radius: 10px;
+　  cursor: pointer;
+  　margin: 15px 0;      /* 上下に余白をつける */
+　  display: block;      /* ←横並びにならないようにする */
+ 　 margin-left: auto;   /* ←中央寄せ */
+  　margin-right: auto;  /* ←中央寄せ */
+　}
 
   /* QRコード中央寄せ */
   #qrcode {
@@ -94,6 +97,3 @@ button {
 
 </body>
 </html>
-
-
-
