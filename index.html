@@ -60,18 +60,22 @@ button {
   button { 
     padding: 10px 20px; 
     font-size: 18px; 
+    border-radius: 10px; 
+    cursor: pointer; 
+    margin-bottom: 20px; /* ← ボタンとQRコードの間に余白 */
   }
 
   /* QRコード中央寄せ */
   #qrcode {
-    margin: 20px auto;      /* 上下マージンと中央寄せ */
-    display: inline-block;  /* ブロック化して中央に配置 */
+    display: flex;
+    justify-content: center;  /* ← 横方向の中央寄せ */
+    margin-top: 10px;
   }
 </style>
 </head>
 <body>
 
-<h1>QRコードジェネレーター📱</h1>
+<h1>QRコードジェネレーター</h1>
 <input type="text" id="text" placeholder="QRにしたい文字やURLを入力" />
 <br>
 <button onclick="generateQRCode()">生成</button>
@@ -84,11 +88,12 @@ button {
     container.innerHTML = ""; // 前のQRコードを消す
     const text = document.getElementById("text").value;
     if (text.trim() === "") { alert("文字を入力してください"); return; }
-    new QRCode(container, { text, width: 200, height: 200 });
+    new QRCode(container, { text, width: 300, height: 300 });
   }
 </script>
 
 </body>
 </html>
+
 
 
